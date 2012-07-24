@@ -133,7 +133,7 @@ def connect(request):
                 raise OpenFacebookException('please authenticate')
 
         #for CONNECT and LOGIN we simple redirect to the next page
-        return next_redirect(request, default=facebook_settings.FACEBOOK_LOGIN_DEFAULT_REDIRECT)
+    return next_redirect(request, default=facebook_settings.FACEBOOK_LOGIN_DEFAULT_REDIRECT)
 
     if not settings.DEBUG and facebook_settings.FACEBOOK_HIDE_CONNECT_TEST:
         raise Http404
